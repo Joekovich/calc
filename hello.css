@@ -1,0 +1,107 @@
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10vh;
+    background: #333;
+    color: #f9f9f9;
+    font-size: 1.2rem;
+}
+
+.logo {
+    padding: 0 1rem;
+}
+
+.logo a {
+    color: #f9f9f9;
+    text-decoration: none;
+}
+
+.nav-links {
+    display: flex;
+    justify-content: space-around;
+    width: 50%;
+}
+
+.nav-links li {
+    list-style: none;
+}
+
+.nav-links a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.burger div {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px;
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        overflow-x: hidden;
+    }
+}
+
+.nav-links {
+    position: absolute;
+    right: 0px;
+    height: 92vh;
+    top: 8vh;
+    background: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 50%;
+    transform: translateX(100%);
+    transition: transform 0.5s ease-in;
+}
+
+.nav-links li {
+    opacity: 0;
+}
+
+.burger {
+    display: block;
+}
+
+.nav-active {
+    transform: translateX(0%);
+}
+
+.burger-menu {
+    transform: translateX(0%);
+}
+
+
+.calculator {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    justify-items: center;
+    align-items: center;
+    margin: auto;
+    width: 200px;
+}
+
+.calculator button {
+    grid-column: span 1;
+    grid-row: span 1;
+    padding: 10px;
+    margin: 5px;
+    font-size: 16px;
+    background-color: #ccc;
+    color: #465ead;
+}
+
+#result {
+    grid-column: 1 / -1;
+    grid-row: 20px;
+    text-align: right;
+    padding: 10px;
+}
+
+
+
